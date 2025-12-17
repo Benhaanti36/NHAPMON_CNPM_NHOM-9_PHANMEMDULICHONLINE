@@ -1,0 +1,110 @@
+body { margin: 0; font-family: 'Arial', sans-serif; background: #f4f7f8; }
+
+/* Background & Hero */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('../JPG/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 10%;
+}
+
+/* Logo TriporaX */
+header { display: flex; justify-content: space-between; align-items: center; }
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: baseline;
+}
+.highlight-x {
+    font-size: 45px;
+    color: #00d2ff;
+    margin-left: 2px;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+/* Nút Header */
+.auth-btns a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+.btn-reg { background: #007bff; }
+
+/* Nội dung giữa Hero */
+.hero-body { text-align: center; margin-top: 80px; }
+.hero-body h1 { font-size: 36px; margin-bottom: 40px; }
+
+.service-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.item { cursor: pointer; transition: 0.3s; }
+.item i { font-size: 30px; display: block; margin-bottom: 10px; }
+.item:hover { transform: scale(1.1); color: #ffca28; }
+
+.search-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.input-grp { color: #333; padding: 0 20px; border-right: 1px solid #ddd; }
+.input-grp input { border: none; outline: none; padding: 10px; width: 250px; }
+.btn-search { background: #ff5e1f; border: none; color: white; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+/* SECTION ƯU ĐÃI (ĐÃ SỬA LỖI) */
+.extra { padding: 50px 10%; text-align: center; }
+.deal-cards { 
+    display: flex; 
+    gap: 30px; 
+    justify-content: center; 
+    margin-top: 30px; 
+}
+
+.d-card {
+    width: 45%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: white; /* Đã xóa màu xám #ddd */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.d-card img {
+    width: 100%;
+    height: 250px; /* Chiều cao cố định cho ảnh */
+    object-fit: cover;
+    display: block;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff385c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.card-text {
+    padding: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
