@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>TriporaX - App du lịch hàng đầu</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <header>
+            <div class="logo">Tripora<span class="highlight-x">X</span></div>
+            <div class="auth-btns">
+                <a href="dangnhap.html" class="btn-login">Đăng Nhập</a>
+                <a href="dangnhap.html" class="btn-reg">Đăng Ký</a>
+            </div>
+        </header>
+
+        <div class="hero-body">
+            <h1>App du lịch hàng đầu, một chạm đi bất cứ đâu</h1>
+            
+            <div class="service-icons">
+                <div class="item" onclick="checkAuth('Khách sạn')">
+                    <i class="fa fa-hotel"></i> <span>Khách sạn</span>
+                </div>
+                <div class="item" onclick="checkAuth('Vé máy bay')">
+                    <i class="fa fa-plane"></i> <span>Vé máy bay</span>
+                </div>
+                <div class="item" onclick="checkAuth('Vé xe khách')">
+                    <i class="fa fa-bus"></i> <span>Vé xe khách</span>
+                </div>
+                <div class="item" onclick="checkAuth('Sân bay')">
+                    <i class="fa fa-shuttle-van"></i> <span>Sân bay</span>
+                </div>
+                <div class="item" onclick="checkAuth('Thuê xe')">
+                    <i class="fa fa-car"></i> <span>Thuê xe</span>
+                </div>
+                <div class="item" onclick="checkAuth('Khác')">
+                    <i class="fa fa-ellipsis-h"></i> <span>Khác</span>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <div class="input-grp">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Bạn muốn đi đâu?">
+                </div>
+                <button class="btn-search">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="extra">
+        <h2>Ưu đãi vé máy bay & Khách sạn</h2>
+        <div class="deal-cards">
+            <div class="d-card" onclick="checkAuth('Hot Deal')">
+                <div class="discount-badge">-30%</div>
+                <img src="../JPG/hotdealquocnoi.jpg" alt="Hot Deal">
+                <div class="card-text">Hot Deal Quốc Nội</div>
+            </div>
+
+            <div class="d-card" onclick="checkAuth('Hotel Combo')">
+                <div class="discount-badge">-50%</div>
+                <img src="../JPG/combokhachsan.jpg" alt="Combo Khách Sạn">
+                <div class="card-text">Combo Khách Sạn</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../JS/home.js"></script>
+</body>
+</html>
