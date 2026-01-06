@@ -1,8 +1,31 @@
 function checkAuth(serviceName) {
-    // 1. Lưu dịch vụ người dùng muốn vào để sau khi đăng nhập xong có thể chuyển tiếp
     localStorage.setItem('redirectService', serviceName);
-    
-    // 2. Chuyển hướng sang trang đăng nhập
-    alert(`Bạn cần đăng nhập để sử dụng dịch vụ: ${serviceName}`);
-    window.location.href = "dangnhap.html";
+
+    const isLogin = localStorage.getItem("isLogin");
+    if (isLogin === "true") {
+        alert("Truy cập dịch vụ: " + serviceName);
+    } else {
+        window.location.href = "dangnhap.html";
+    }
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const isLogin = localStorage.getItem("isLogin");
+
+    const authBtns = document.getElementById("authBtns");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (isLogin === "true") {
+        if (authBtns) authBtns.style.display = "none";
+        if (logoutBtn) logoutBtn.style.display = "block";
+    } else {
+        if (authBtns) authBtns.style.display = "block";
+        if (logoutBtn) logoutBtn.style.display = "none";
+    }
+});
+
+function logout() {
+    localStorage.removeItem("isLogin");
+    localStorage.removeItem("redirectService");
+    window.location.reload();
+}
+
