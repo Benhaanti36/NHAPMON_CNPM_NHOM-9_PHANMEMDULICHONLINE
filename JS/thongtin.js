@@ -1,4 +1,9 @@
-function goThongTin(place) {
-    localStorage.setItem("selectedPlace", place);
-    window.location.href = "thongtin.html";
-}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const selected = localStorage.getItem("selectedPlace");
+
+    document.querySelectorAll(".detail").forEach(item => {
+        item.style.display = item.id === selected ? "block" : "none";
+    });
+});

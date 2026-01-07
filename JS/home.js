@@ -19,4 +19,7 @@ function logout() {
     localStorage.removeItem("redirectService");
     window.location.reload();
 }
-
+function goThongTin(place) {
+    localStorage.setItem("selectedPlace", place);
+    window.location.href = "thongtin.html";
+}

@@ -5,6 +5,15 @@ body {
     background: #f5f7fa;
     color: #333;
 }
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('../JPG/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 10%;
+}
 
 /* Khối thông tin chính */
 .thongtin-container {
