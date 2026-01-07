@@ -1,13 +1,4 @@
-function checkAuth(serviceName) {
-    localStorage.setItem('redirectService', serviceName);
 
-    const isLogin = localStorage.getItem("isLogin");
-    if (isLogin === "true") {
-        alert("Truy cập dịch vụ: " + serviceName);
-    } else {
-        window.location.href = "dangnhap.html";
-    }
-}
 document.addEventListener("DOMContentLoaded", function () {
     const isLogin = localStorage.getItem("isLogin");
 
