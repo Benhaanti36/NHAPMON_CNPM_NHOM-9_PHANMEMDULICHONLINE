@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* CỰC KỲ QUAN TRỌNG */
 }
 
 .auth-box {
@@ -21,10 +22,16 @@ body {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-.logo {
-    font-size: 26px;
+.logo-top-right {
+    position: absolute; 
+    top: 30px;          /* Khoảng cách từ trên xuống */
+    left: 40px;        /* Khoảng cách từ bên trái vào */
+    
+    color: white;       /* Ép logo về màu trắng */
+    font-size: 30px;
     font-weight: bold;
-    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Đổ bóng để chữ rõ trên nền mây */
+    z-index: 100;       /* Đảm bảo luôn nằm trên cùng */
 }
 
 .highlight-x {
@@ -70,4 +77,36 @@ body {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
+}
+.site-footer {
+    background-color: #1c2c38; /* Màu xanh đậm giống ảnh bạn gửi */
+    color: #94a3b8;           /* Màu chữ xám nhạt để dễ đọc */
+    padding: 30px 20px;       /* Khoảng cách trên dưới và hai bên */
+    text-align: center;       /* Căn giữa toàn bộ nội dung */
+    font-size: 13px;          /* Kích thước chữ nhỏ gọn */
+    line-height: 1.6;         /* Khoảng cách giữa các dòng */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content p {
+    margin: 5px 0;            /* Khoảng cách giữa các dòng chữ */
+}
+
+.copyright {
+    color: #ffffff;           /* Chữ Copyright màu trắng cho nổi bật */
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+/* Đảm bảo footer luôn ở dưới cùng nếu nội dung trang ít */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.site-footer {
+    margin-top: auto;         /* Đẩy footer xuống đáy trang */
 }
